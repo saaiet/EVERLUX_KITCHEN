@@ -1,24 +1,33 @@
-# EVER LUXE | Beautiful Life For You
+# EVER LUXE — Beautiful Life For You
 
-وب‌سایت معرفی تک‌صفحه‌ای برند EVER LUXE با طراحی مینیمال سفید و فیروزه‌ای.
+وب‌سایت معرفی تک‌صفحه‌ای EVER LUXE با طرح سفید، فیروزه‌ای و سبزآبی، راست‌چین و واکنش‌گرا.
 
-## فایل‌ها
-- `index.html`: وب‌سایت کامل؛ فونت‌های دوران و کلمه و لوگوی برند داخل همین فایل تعبیه شده‌اند و برای نمایش آفلاین به فایل جداگانه نیاز نیست.
-- `.nojekyll`: انتشار ساده استاتیک در GitHub Pages.
+## اجرای آفلاین
+فایل `index.html` را دانلود و در مرورگر باز کنید. هیچ وابستگی بیرونی برای ظاهر، لوگو و فونت جایگزین وجود ندارد.
 
-## انتشار GitHub Pages
-وارد بخش Settings → Pages شوید:
+## امکانات
+- بازطراحی آیکون برند به SVG برداری، همراه با تایپوگرافی EVER LUXE
+- نمایش صحیح در موبایل، تبلت و دسکتاپ
+- عنوان‌ها با فایل فونت Doran Bold
+- برای متن‌ها ابتدا فونت Yekan Bakh محلی تلاش می‌شود؛ چون فایل وب‌فونت یکان‌بخ هنوز در اختیار پروژه نیست، فونت صاحب مجوز Peyda به‌صورت آفلاین جایگزین می‌شود
+- لینک اینستاگرام فقط به‌عنوان راه ارتباطی؛ بدون آمار پیج
+- لینک تماس، واتساپ، تلگرام و ایمیل
+- دو نشانی، شماره ثبت، کد پستی
+- حرکت‌های ظریف هنگام هاور و پیمایش با رعایت `prefers-reduced-motion`
+
+## تنظیم GitHub Pages
+به https://github.com/saaiet/EVERLUX/settings/pages بروید و گزینه‌های زیر را تنظیم کنید:
+
 - Source: `Deploy from a branch`
 - Branch: `main`
 - Folder: `/(root)`
 - Save
 
-لینک مورد انتظار:
-https://saaiet.github.io/EVERLUX/
+لینک مورد انتظار: https://saaiet.github.io/EVERLUX/
 
-## ارتباط با برند
-- Instagram: https://instagram.com/everluxe_kitchen
-- Telegram: https://t.me/VIPbip
-- Email: everluxe2010@yahoo.com
+## اطلاعات برند
+- اینستاگرام: https://www.instagram.com/everluxe_kitchen/
+- تلگرام: https://t.me/VIPbip
+- ایمیل: everluxe2010@yahoo.com
 
-وب‌سایت یک فایل HTML استاتیک است و برای اجرا نیازی به Node.js یا سرور اختصاصی ندارد.
+هر تغییری در سایت را می‌توان با ویرایش یک فایل `index.html` انجام داد.
