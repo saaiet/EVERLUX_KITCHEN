@@ -129,21 +129,43 @@ h1,h2,h3,p{margin-block-start:0}
 .footer-links{display:flex;gap:15px;flex-wrap:wrap}
 .footer-links a{color:#44777a;font-size:.9rem}
 .footer-links a:hover{color:var(--deep)}
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}
-.reveal.visible{opacity:1;transform:none}
+.reveal{opacity:1;transform:none}
+.reveal.visible{animation:rise-in .65s both}
+@keyframes rise-in{from{opacity:.7;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.reveal.visible{animation:none}}
 :focus-visible{outline:3px solid #07969a;outline-offset:3px}
 @media(max-width:1050px){.navigation{gap:13px}.hero-shell{grid-template-columns:1.06fr .94fr;gap:8px}.hero-art{min-height:345px}.brand-showcase .brand-symbol{width:72px;height:72px}.brand-showcase .logo-ever,.brand-showcase .logo-luxe{font-size:28px}.contact-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:800px){.hero-shell{grid-template-columns:1fr;padding:34px;gap:18px}.hero-art{min-height:335px}.brand-showcase{min-height:230px;padding:35px 20px;max-width:420px}.features{grid-template-columns:1fr 1fr}.about-card{grid-template-columns:1fr;gap:24px}.contact-banner{grid-template-columns:1fr}.contact-banner .btn{justify-self:start}.section-heading{display:block}.section-heading p{margin-top:9px}}
 @media(max-width:620px){html{scroll-padding-top:140px}.container{width:min(100% - 30px,1160px)}.site-header .inner{min-height:auto;padding:10px 0;flex-wrap:wrap;gap:8px}.brand-symbol{width:45px;height:45px}.logo-ever,.logo-luxe{font-size:19px}.navigation{width:100%;flex-wrap:nowrap;gap:15px;overflow-x:auto;scrollbar-width:none;padding:1px 0 3px}.navigation::-webkit-scrollbar{display:none}.navigation a:not(.nav-cta){white-space:nowrap;font-size:.85rem}.nav-cta{display:none}.hero{padding:22px 0 5px}.hero-shell{padding:26px 21px 28px;border-radius:27px;min-height:0}.hero h1{font-size:clamp(2rem,9vw,2.9rem);margin-top:18px}.hero-copy .tagline{font-size:.85rem}.hero-copy .intro{font-size:1rem}.hero-buttons{gap:9px}.hero-buttons .btn{flex:1;padding:12px 13px;font-size:.88rem}.hero-art{min-height:300px}.brand-showcase{max-width:315px;min-height:210px}.brand-showcase .brand-symbol{width:64px;height:64px}.brand-showcase .logo-ever,.brand-showcase .logo-luxe{font-size:24px}.brand-showcase .logo-slogan{font-size:8px}.bubble-one{right:8px;top:15px}.bubble-two{left:5px;bottom:20px}.section{padding-top:40px}.features,.contact-grid,.address-grid{grid-template-columns:1fr}.feature{min-height:0;padding:24px}.feature p{font-size:.96rem}.about-card{padding:25px;gap:19px}.contact-section{padding-top:40px}.contact-banner{border-radius:24px;padding:26px}.contact-card{padding:18px}.address-card{padding:20px}.footer-inner{flex-direction:column;align-items:flex-start}.identity-bar{justify-content:flex-start;gap:10px;font-size:.9rem}}
 @media(max-width:380px){.hero-buttons{flex-direction:column}.hero-buttons .btn{width:100%}.brand-showcase{transform:rotate(-2deg);padding:30px 12px}.brand-showcase .logo-lockup{gap:8px}.hero-art{min-height:260px}.contact-card{gap:10px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+
+.quick-access{padding:0 0 34px}
+.quick-access-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+.quick-action{min-width:0;display:flex;align-items:center;gap:13px;border-radius:22px;padding:15px 17px;background:linear-gradient(135deg,#fff 55%,#f0fbf8);border:1px solid #cfeae5;box-shadow:0 9px 24px rgba(12,97,105,.055);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.quick-action:hover{transform:translateY(-5px);box-shadow:0 16px 30px rgba(11,109,116,.13);border-color:#8bd9d0}
+.quick-action:focus-visible{outline:3px solid #039aa0;outline-offset:3px}
+.quick-action .quick-icon{flex:0 0 43px;width:43px;height:43px;border-radius:15px;display:grid;place-items:center;background:#e4f8f5;color:#068b92}
+.quick-action .quick-icon svg{width:22px;height:22px}
+.quick-action strong{display:block;line-height:1.45;font-family:"Doran",Tahoma,sans-serif;font-size:.97rem}
+.quick-action small{display:block;margin-top:4px;color:#548284;font-size:.79rem;direction:ltr;text-align:right;line-height:1.4}
+.quick-action strong,.quick-action small{overflow-wrap:anywhere}
+.business-label{margin-top:16px;color:#46787b;text-align:center;font-size:.87rem}
+.business-label b{color:#0c5961}
+.contact-note{margin:16px 0 0;padding:17px 20px;border:1px solid #b5e7df;background:#f2fcf9;border-radius:19px;color:#256b6e;line-height:1.9;text-align:justify;text-justify:inter-word}
+.contact-note strong{color:#115b60}
+.identity-bar{flex-wrap:wrap}
+@media(max-width:920px){.quick-access-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:540px){.quick-access{padding-bottom:14px}.quick-access-grid{gap:10px}.quick-action{padding:12px;gap:8px;border-radius:17px;align-items:flex-start}.quick-action .quick-icon{flex:0 0 33px;width:33px;height:33px;border-radius:11px}.quick-action .quick-icon svg{width:18px;height:18px}.quick-action strong{font-size:.82rem}.quick-action small{font-size:.71rem}.contact-note{padding:14px;font-size:.9rem}}
+@media(prefers-reduced-motion:reduce){.quick-action{transition:none}.quick-action:hover{transform:none}}
+
 </style>
 </head>
 <body>
 <header class="site-header">
 <div class="container inner"><a class="brand-anchor" href="#top" aria-label="EVER LUXE | صفحه اصلی"><span class="logo-lockup" dir="ltr"><svg class="brand-symbol" role="img" aria-label="نشان EVER LUXE" viewBox="0 0 74 70" xmlns="http://www.w3.org/2000/svg"><path d="M 34 2 L 32 5 L 31 5 L 22 14 L 21 14 L 2 33 L 2 35 L 3 35 L 8 30 L 9 30 L 10 29 L 11 30 L 11 33 L 12 34 L 12 53 L 11 54 L 11 58 L 12 59 L 12 62 L 11 63 L 13 65 L 23 65 L 24 64 L 24 57 L 25 56 L 25 54 L 24 53 L 24 44 L 23 43 L 22 43 L 19 40 L 19 38 L 18 37 L 18 31 L 19 30 L 20 30 L 21 31 L 21 32 L 22 33 L 22 37 L 24 39 L 24 38 L 25 37 L 25 36 L 24 35 L 24 32 L 26 30 L 27 30 L 28 31 L 28 39 L 29 39 L 31 37 L 31 32 L 33 30 L 35 32 L 35 36 L 34 37 L 34 39 L 28 45 L 28 64 L 29 65 L 46 65 L 47 64 L 47 53 L 42 53 L 41 52 L 41 40 L 42 39 L 42 37 L 43 36 L 44 33 L 46 31 L 49 30 L 51 32 L 51 64 L 52 65 L 58 65 L 60 62 L 60 57 L 59 56 L 59 53 L 60 52 L 60 39 L 59 38 L 59 35 L 60 34 L 60 30 L 61 29 L 62 29 L 68 35 L 69 35 L 70 34 L 50 14 L 49 14 L 38 3 L 37 3 L 36 2 Z" fill="currentColor"/></svg><span class="logo-type"><span class="logo-ever">EVER</span><span class="logo-luxe">LUXE</span><span class="logo-slogan">Beautiful Life For You</span></span></span></a>
 <nav class="navigation" aria-label="فهرست اصلی">
-  <a href="#about">درباره ما</a><a href="#services">حوزه فعالیت</a><a href="#contact">راه‌های ارتباطی</a><a href="#locations">آدرس‌ها</a><a class="nav-cta" href="https://www.instagram.com/everluxe_kitchen/" target="_blank" rel="noopener noreferrer"><svg fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.8 6.2h.01"/></svg> اینستاگرام</a>
+  <a href="#about">درباره ما</a><a href="#services">حوزه فعالیت</a><a href="#contact">تماس و سفارش</a><a href="#locations">آدرس‌ها</a><a class="nav-cta" href="https://www.instagram.com/everluxe_kitchen/" target="_blank" rel="noopener noreferrer"><svg fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.8 6.2h.01"/></svg> اینستاگرام</a>
 </nav></div>
 </header>
 <main id="top">
@@ -164,6 +186,15 @@ h1,h2,h3,p{margin-block-start:0}
     </div>
   </div></div></section>
 
+  <section class="quick-access" aria-label="دسترسی سریع به راه‌های ارتباطی">
+<div class="container"><div class="quick-access-grid">
+<a class="quick-action" href="tel:+989121794338"><span class="quick-icon"><svg fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v2.5a2 2 0 0 1-2.2 2C10.1 20.8 3.2 13.9 2.6 4.2A2 2 0 0 1 4.6 2h2.5a2 2 0 0 1 2 1.7l.6 3.5a2 2 0 0 1-.6 1.8L7.7 10c1.1 2.4 3.4 4.7 5.9 5.8l1.1-1.4a2 2 0 0 1 1.8-.6l3.5.6a2 2 0 0 1 2 2.5Z"/></svg></span><span><strong>تماس مستقیم</strong><small dir="ltr">0912 179 4338</small></span></a>
+<a class="quick-action" href="https://wa.me/989351141196" target="_blank" rel="noopener noreferrer"><span class="quick-icon"><svg fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 11.5a8.3 8.3 0 0 1-12 7.2L3 20l1.4-5.1a8.4 8.4 0 1 1 15.9-3.4Z"/><path d="M8.5 8.6c.4 2.9 3.1 5.8 6.4 6.9l1.4-1.4-2.6-1.2-1 .9c-1.4-.6-2.3-1.6-2.9-2.8l.9-1-1.3-2.6-1.2 1.2"/></svg></span><span><strong>واتساپ سفارش</strong><small dir="ltr">0935 114 1196</small></span></a>
+<a class="quick-action" href="https://t.me/VIPbip" target="_blank" rel="noopener noreferrer"><span class="quick-icon"><svg fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 4 3 11l7 2 2.2 7L21 4Z"/><path d="m10 13 11-9"/></svg></span><span><strong>تلگرام مجموعه</strong><small dir="ltr">@VIPbip</small></span></a>
+<a class="quick-action" href="#locations"><span class="quick-icon"><svg fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5.3-8 12-8 12S4 15.3 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.6"/></svg></span><span><strong>نشانی‌ها</strong><small>تهرانپارس و صالح‌آباد</small></span></a>
+</div><p class="business-label">EVER LUXE · <b>Beautiful Life For You</b></p></div>
+</section>
+
   <section id="services" class="section reveal" aria-labelledby="services-title"><div class="container">
     <div class="section-heading"><div><small>WHAT WE DO</small><h2 id="services-title">حوزهٔ فعالیت EVER LUXE</h2></div><p>از انتخاب لوازم کاربردی تا جزئیاتی که حال‌وهوای خانه را تغییر می‌دهند.</p></div>
     <div class="features">
@@ -180,7 +211,7 @@ h1,h2,h3,p{margin-block-start:0}
   </div></div></section>
 
   <section id="contact" class="section contact-section reveal" aria-labelledby="contact-title"><div class="container">
-    <div class="contact-banner"><div><h2 id="contact-title">ارتباط مستقیم با EVER LUXE</h2><p>برای دریافت اطلاعات محصولات، هماهنگی و ثبت سفارش با ما در ارتباط باشید.</p></div>
+    <div class="contact-banner"><div><h2 id="contact-title">تماس، ثبت سفارش و راه‌های ارتباطی</h2><p>برای دریافت اطلاعات محصولات، هماهنگی و ثبت سفارش با ما در ارتباط باشید.</p></div>
       <a class="btn" href="https://wa.me/989121794338" target="_blank" rel="noopener noreferrer"><svg fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 11.5a8.3 8.3 0 0 1-12 7.2L3 20l1.4-5.1a8.4 8.4 0 1 1 15.9-3.4Z"/><path d="M8.5 8.6c.4 2.9 3.1 5.8 6.4 6.9l1.4-1.4-2.6-1.2-1 .9c-1.4-.6-2.3-1.6-2.9-2.8l.9-1-1.3-2.6-1.2 1.2"/></svg> گفتگو در واتساپ</a>
     </div>
     <div class="contact-grid">
@@ -191,6 +222,11 @@ h1,h2,h3,p{margin-block-start:0}
       <a class="contact-card" href="https://t.me/VIPbip" target="_blank" rel="noopener noreferrer"><span class="contact-icon"><svg fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 4 3 11l7 2 2.2 7L21 4Z"/><path d="m10 13 11-9"/></svg></span><div class="details"><h3>تلگرام</h3><span class="number" dir="ltr">@VIPbip</span></div></a>
       <a class="contact-card" href="mailto:everluxe2010@yahoo.com"><span class="contact-icon"><svg fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 6 9 7 9-7"/></svg></span><div class="details"><h3>ایمیل</h3><span class="number" dir="ltr">everluxe2010@yahoo.com</span></div></a>
     </div>
+    <p class="contact-note"><strong>اطلاعات تماس مجموعه:</strong>
+    همراه: <bdi dir="ltr">۰۹۱۲۱۷۹۴۳۳۸</bdi> و <bdi dir="ltr">۰۹۳۵۱۱۴۱۱۹۶</bdi>؛
+    تلفن دفتر: <bdi dir="ltr">۰۲۱۷۷۱۲۴۳۲۲</bdi> و <bdi dir="ltr">۰۲۱۷۷۱۲۴۳۲۳</bdi>.
+    برای ارتباط آنلاین از تلگرام، واتساپ یا اینستاگرام استفاده کنید؛ ایمیل رسمی:
+    <a href="mailto:everluxe2010@yahoo.com" dir="ltr">everluxe2010@yahoo.com</a>.</p>
   </div></section>
 
   <section id="locations" class="section reveal" aria-labelledby="locations-title"><div class="container">
@@ -199,7 +235,7 @@ h1,h2,h3,p{margin-block-start:0}
       <article class="address-card"><div class="address-icon"><svg fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5.3-8 12-8 12S4 15.3 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.6"/></svg></div><div><h3>دفتر تهرانپارس</h3><p class="justify">تهران، سه‌راه تهرانپارس، خیابان اتحاد، روبه‌روی پنجم غربی، پلاک ۲۳/۱</p><p class="eng-address">No. 23/1, Ettehad St., opposite Fifth West, Tehranpars, Tehran, Iran</p></div></article>
       <article class="address-card"><div class="address-icon"><svg fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5.3-8 12-8 12S4 15.3 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.6"/></svg></div><div><h3>صالح‌آباد، سان‌سنتر</h3><p class="justify">تهران، صالح‌آباد، مجموعهٔ سان‌سنتر، طبقهٔ ۱+</p><p class="eng-address">Sun Center, Floor +1, Saleh Abad, Tehran, Iran</p></div></article>
     </div>
-    <div class="identity-bar"><span>شمارهٔ ثبت: <bdi>۱۷۲۱۴۶</bdi></span><span>کد پستی: <bdi>۱۶۵۸۹۱۶۴۱۱</bdi></span></div>
+    <div class="identity-bar"><span>مدیریت: <strong>مهدی جعفری</strong></span><span>شمارهٔ ثبت: <bdi>۱۷۲۱۴۶</bdi></span><span>کد پستی: <bdi>۱۶۵۸۹۱۶۴۱۱</bdi></span></div>
   </div></section>
 </main>
 <footer class="site-footer"><div class="container"><div class="footer-inner"><a href="#top" aria-label="بازگشت به صفحهٔ اصلی"><span class="logo-lockup" dir="ltr"><svg class="brand-symbol" role="img" aria-label="نشان EVER LUXE" viewBox="0 0 74 70" xmlns="http://www.w3.org/2000/svg"><path d="M 34 2 L 32 5 L 31 5 L 22 14 L 21 14 L 2 33 L 2 35 L 3 35 L 8 30 L 9 30 L 10 29 L 11 30 L 11 33 L 12 34 L 12 53 L 11 54 L 11 58 L 12 59 L 12 62 L 11 63 L 13 65 L 23 65 L 24 64 L 24 57 L 25 56 L 25 54 L 24 53 L 24 44 L 23 43 L 22 43 L 19 40 L 19 38 L 18 37 L 18 31 L 19 30 L 20 30 L 21 31 L 21 32 L 22 33 L 22 37 L 24 39 L 24 38 L 25 37 L 25 36 L 24 35 L 24 32 L 26 30 L 27 30 L 28 31 L 28 39 L 29 39 L 31 37 L 31 32 L 33 30 L 35 32 L 35 36 L 34 37 L 34 39 L 28 45 L 28 64 L 29 65 L 46 65 L 47 64 L 47 53 L 42 53 L 41 52 L 41 40 L 42 39 L 42 37 L 43 36 L 44 33 L 46 31 L 49 30 L 51 32 L 51 64 L 52 65 L 58 65 L 60 62 L 60 57 L 59 56 L 59 53 L 60 52 L 60 39 L 59 38 L 59 35 L 60 34 L 60 30 L 61 29 L 62 29 L 68 35 L 69 35 L 70 34 L 50 14 L 49 14 L 38 3 L 37 3 L 36 2 Z" fill="currentColor"/></svg><span class="logo-type"><span class="logo-ever">EVER</span><span class="logo-luxe">LUXE</span><span class="logo-slogan">Beautiful Life For You</span></span></span></a><p>© EVER LUXE · Beautiful Life For You</p><div class="footer-links"><a href="https://www.instagram.com/everluxe_kitchen/" target="_blank" rel="noopener noreferrer">اینستاگرام</a><a href="https://t.me/VIPbip" target="_blank" rel="noopener noreferrer">تلگرام</a><a href="mailto:everluxe2010@yahoo.com">ایمیل</a></div></div></div></footer>
